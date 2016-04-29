@@ -1,8 +1,8 @@
-package dfd.pbol.GUI;
+package edu.maranatha.pbol.view;
 
-import dfd.pbol.utils.BackgroundExecutor;
-import dfd.pbol.utils.Timer;
-import dfd.pbol.utils.Utils;
+import edu.maranatha.pbol.utils.BackgroundExecutor;
+import edu.maranatha.pbol.utils.Timer;
+import edu.maranatha.pbol.utils.Utils;
 
 import javax.swing.*;
 import java.awt.*;

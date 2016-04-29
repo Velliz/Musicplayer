@@ -1,16 +1,12 @@
-package dfd.pbol.main;
+package edu.maranatha.pbol.main;
 
-import de.javasoft.plaf.synthetica.SyntheticaBlackMoonLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaMauveMetallicLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaSkyMetallicLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaStandardLookAndFeel;
-import dfd.pbol.GUI.FFTParallelFrame;
-import dfd.pbol.GUI.SeekBar;
-import dfd.pbol.GUI.StatusFrame;
-import dfd.pbol.GUI.WaveformParallelFrame;
-import dfd.pbol.audio.AudioPlayer;
-import dfd.pbol.utils.BackgroundExecutor;
-import dfd.pbol.utils.Utils;
+import edu.maranatha.pbol.view.FFTParallelFrame;
+import edu.maranatha.pbol.view.SeekBar;
+import edu.maranatha.pbol.view.StatusFrame;
+import edu.maranatha.pbol.view.WaveformParallelFrame;
+import edu.maranatha.pbol.audio.AudioPlayer;
+import edu.maranatha.pbol.utils.BackgroundExecutor;
+import edu.maranatha.pbol.utils.Utils;
 import java.awt.Color;
 
 import java.awt.event.ActionEvent;
@@ -356,10 +352,14 @@ public class Mp3Window extends JFrame {
 
     public static void main(String[] args) {
         try {
-            UIManager.setLookAndFeel(new SyntheticaSkyMetallicLookAndFeel());
-        } catch (ParseException ex) {
-            Logger.getLogger(Mp3Window.class.getName()).log(Level.SEVERE, null, ex);
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(Mp3Window.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Mp3Window.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Mp3Window.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
             Logger.getLogger(Mp3Window.class.getName()).log(Level.SEVERE, null, ex);
         }
         SwingUtilities.invokeLater(new Runnable() {

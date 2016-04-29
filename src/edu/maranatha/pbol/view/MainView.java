@@ -1,8 +1,8 @@
-package dfd.pbol.GUI;
+package edu.maranatha.pbol.view;
 
-import dfd.pbol.audio.AudioPlayer;
-import dfd.pbol.utils.BackgroundExecutor;
-import dfd.pbol.utils.Utils;
+import edu.maranatha.pbol.audio.AudioPlayer;
+import edu.maranatha.pbol.utils.BackgroundExecutor;
+import edu.maranatha.pbol.utils.Utils;
 import javazoom.jlgui.basicplayer.BasicController;
 import javazoom.jlgui.basicplayer.BasicPlayerEvent;
 import javazoom.jlgui.basicplayer.BasicPlayerException;

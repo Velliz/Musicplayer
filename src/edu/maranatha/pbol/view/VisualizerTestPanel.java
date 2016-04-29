@@ -1,4 +1,4 @@
-package dfd.pbol.GUI;
+package edu.maranatha.pbol.view;
 
 import javax.swing.*;
 import java.awt.*;

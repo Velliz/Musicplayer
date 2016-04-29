@@ -1,6 +1,6 @@
-package dfd.pbol.audio;
+package edu.maranatha.pbol.audio;
 
-import dfd.pbol.GUI.MainView;
+import edu.maranatha.pbol.view.MainView;
 import javazoom.jlgui.basicplayer.*;
 
 import java.io.File;

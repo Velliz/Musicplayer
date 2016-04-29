@@ -1,4 +1,4 @@
-package dfd.pbol.utils;
+package edu.maranatha.pbol.utils;
 
 public class Utils {
 	/**
