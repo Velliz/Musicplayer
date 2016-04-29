@@ -1,4 +1,4 @@
-package dfd.pbol.utils;
+package edu.maranatha.pbol.utils;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
