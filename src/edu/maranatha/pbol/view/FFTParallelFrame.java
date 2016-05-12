@@ -41,7 +41,7 @@ public class FFTParallelFrame extends JFrame {
         fdp.setSize(WIDTH, HEIGHT);
         fdp.setName("FreqDiag PANEL");
         add(fdp);
-        
+
         setLocationRelativeTo(null);
     }
 

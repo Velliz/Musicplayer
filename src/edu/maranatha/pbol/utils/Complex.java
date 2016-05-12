@@ -1,12 +1,10 @@
 package edu.maranatha.pbol.utils;
 
-//Below is Complex.java from �9.7 Data Analysis.
-
 public class Complex {
+
     private final double re;   // the real part
     private final double im;   // the imaginary part
 
-    // create a new object with the given real and imaginary parts
     public Complex(double real, double imag) {
         re = real;
         im = imag;
@@ -14,15 +12,26 @@ public class Complex {
 
     // return a string representation of the invoking Complex object
     public String toString() {
-        if (im == 0) return re + "";
-        if (re == 0) return im + "i";
-        if (im <  0) return re + " - " + (-im) + "i";
+        if (im == 0) {
+            return re + "";
+        }
+        if (re == 0) {
+            return im + "i";
+        }
+        if (im < 0) {
+            return re + " - " + (-im) + "i";
+        }
         return re + " + " + im + "i";
     }
 
     // return abs/modulus/magnitude and angle/phase/argument
-    public double abs()   { return Math.hypot(re, im); }  // Math.sqrt(re*re + im*im)
-    public double phase() { return Math.atan2(im, re); }  // between -pi and pi
+    public double abs() {
+        return Math.hypot(re, im);
+    }  // Math.sqrt(re*re + im*im)
+
+    public double phase() {
+        return Math.atan2(im, re);
+    }  // between -pi and pi
 
     // return a new Complex object whose value is (this + b)
     public Complex plus(Complex b) {
@@ -55,17 +64,24 @@ public class Complex {
     }
 
     // return a new Complex object whose value is the conjugate of this
-    public Complex conjugate() {  return new Complex(re, -im); }
+    public Complex conjugate() {
+        return new Complex(re, -im);
+    }
 
     // return a new Complex object whose value is the reciprocal of this
     public Complex reciprocal() {
-        double scale = re*re + im*im;
+        double scale = re * re + im * im;
         return new Complex(re / scale, -im / scale);
     }
 
     // return the real or imaginary part
-    public double re() { return re; }
-    public double im() { return im; }
+    public double re() {
+        return re;
+    }
+
+    public double im() {
+        return im;
+    }
 
     // return a / b
     public Complex divides(Complex b) {
@@ -92,8 +108,6 @@ public class Complex {
     public Complex tan() {
         return sin().divides(cos());
     }
-    
-
 
     // a static version of plus
     public static Complex plus(Complex a, Complex b) {
@@ -103,9 +117,7 @@ public class Complex {
         return sum;
     }
 
-
-//
-//    // sample client for testing
+    // sample client for testing
 //    public static void main(String[] args) {
 //        Complex a = new Complex(5.0, 6.0);
 //        Complex b = new Complex(-3.0, 4.0);
@@ -124,7 +136,4 @@ public class Complex {
 //        System.out.println("|a|          = " + a.abs());
 //        System.out.println("tan(a)       = " + a.tan());
 //    }
-
 }
-//Copyright � 2000�2011, Robert Sedgewick and Kevin Wayne. 
-//Last updated: Wed Feb 9 09:20:16 EST 2011.

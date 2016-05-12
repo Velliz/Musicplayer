@@ -151,13 +151,11 @@ public class MainView extends JFrame {
         btnDel.setText("X");
         container.add(btnDel);
 
-
         //volume
         volslide.setBounds(5, _H, _W - 15, 10);
         volslide.setMinimum(0);
         volslide.setMaximum(100);
         container.add(volslide);
-
 
         //SeekBar
         seekbar.setBounds(5, 10, _W - 15, 10);
@@ -498,7 +496,6 @@ public class MainView extends JFrame {
 //            }
 //        });
 //    }
-
     private void log(String line) {
         System.out.println("UI-Main] " + line);
         stf.addText("UI-Main] " + line);

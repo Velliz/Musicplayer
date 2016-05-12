@@ -19,7 +19,6 @@ public class FreqDiagFrame extends JFrame {
     //Icons
     ImageIcon frameIcon = new ImageIcon(getClass().getResource("/res/waveicon.png"));
 
-
     public FreqDiagFrame() {
         super();
         setIconImage(frameIcon.getImage());
@@ -40,6 +39,7 @@ public class FreqDiagFrame extends JFrame {
     }
 
     class FreqDiagPanel extends JPanel {
+
         byte[] pcmdata = null;
 
         /**
@@ -59,7 +59,6 @@ public class FreqDiagFrame extends JFrame {
         private void doDrawing(Graphics g) {
 
             //log("ThreadSwing: " + Thread.currentThread());
-
             Graphics2D g2d = (Graphics2D) g;
             g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
 
@@ -82,6 +81,7 @@ public class FreqDiagFrame extends JFrame {
         }
 
         class FftTask implements Runnable {
+
             Graphics2D g2d;
             int HEIGHT;
             int WIDTH;
@@ -102,8 +102,9 @@ public class FreqDiagFrame extends JFrame {
                 //relative to the FREQ_N
                 for (int i = 0; i < complexData.length; i++) {
                     int val = 0;
-                    for (int j = 0; j < div; j++)
+                    for (int j = 0; j < div; j++) {
                         val += pcmdata[(i * div) + j];
+                    }
                     complexData[i] = new Complex(val / div, 0);
                 }
                 //Transform data
@@ -144,18 +145,17 @@ public class FreqDiagFrame extends JFrame {
         /**
          * Called each time the UI is rendered
          */
-
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
             doDrawing(g);
         }
         /*
-        @Override
-		public void paint(Graphics g) {
-			super.paint(g);
-			doDrawing(g);
-		}*/
+         @Override
+         public void paint(Graphics g) {
+         super.paint(g);
+         doDrawing(g);
+         }*/
     }
 
     /// END OF JPANEL CLASS

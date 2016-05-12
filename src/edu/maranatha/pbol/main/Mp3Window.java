@@ -1,5 +1,6 @@
 package edu.maranatha.pbol.main;
 
+import de.javasoft.plaf.synthetica.SyntheticaBlueIceLookAndFeel;
 import edu.maranatha.pbol.view.FFTParallelFrame;
 import edu.maranatha.pbol.view.SeekBar;
 import edu.maranatha.pbol.view.StatusFrame;
@@ -352,14 +353,10 @@ public class Mp3Window extends JFrame {
 
     public static void main(String[] args) {
         try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            UIManager.setLookAndFeel(new SyntheticaBlueIceLookAndFeel());
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(Mp3Window.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Mp3Window.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(Mp3Window.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch (ParseException ex) {
             Logger.getLogger(Mp3Window.class.getName()).log(Level.SEVERE, null, ex);
         }
         SwingUtilities.invokeLater(new Runnable() {
@@ -672,18 +669,18 @@ public class Mp3Window extends JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         switch (jComboBox1.getSelectedIndex()) {
             case 0:
-            stf.setVisible(true);
-            break;
+                stf.setVisible(true);
+                break;
             case 1:
-            fdf = new FFTParallelFrame();
-            fdf.setVisible(true);
-            break;
+                fdf = new FFTParallelFrame();
+                fdf.setVisible(true);
+                break;
             case 2:
-            wff = new WaveformParallelFrame();
-            wff.setVisible(true);
-            break;
+                wff = new WaveformParallelFrame();
+                wff.setVisible(true);
+                break;
             default:
-            break;
+                break;
         }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
@@ -702,7 +699,7 @@ public class Mp3Window extends JFrame {
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-backgrounD.setBackground(Color.LIGHT_GRAY);
+        backgrounD.setBackground(Color.LIGHT_GRAY);
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
