@@ -1,4 +1,4 @@
-# javamp3
+# java-music
 Simple java swing mp3 player. You can play list of mp3 file with this app.
 
 # Feature
