@@ -1,11 +1,12 @@
-# java-music
-Simple java swing mp3 player. You can play list of mp3 file with this app.
+## Musicplayer
+Simple - java swing based - mp3 player. 
+You can play list of mp3 file with this app.
 
-# Feature
+## Feature
 `Playlist`
 `Equalizer`
 `Volume Control`
 
-# Special Thanks
+## Credits
 `stackoverflow for code snippet`
 `javazoom for awesome library`
